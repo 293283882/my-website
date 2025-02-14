@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Have A Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="question">Do You Have A Girlfriend?</h1>
+    <button onclick="answer('yes')">Yes</button>
+    <button onclick="answer('no')">No</button>
+    
+    <script>
+        function answer(response) {
+            if (response === 'yes') {
+                document.body.innerHTML = "<h1>Well, get a f***ing girlfriend.</h1>";
+            } else {
+                document.body.innerHTML = "<h1>Good Job!</h1><p>Is She Bad As F***?</p>" +
+                    "<button onclick=\"nextQuestion('hellyeah')\">Hell Yeah</button> " +
+                    "<button onclick=\"nextQuestion('yeah')\">Yeah</button>";
+            }
+        }
+
+        function nextQuestion(response) {
+            if (response === 'hellyeah' || response === 'yeah') {
+                document.body.innerHTML = "<h1>Nice, keep winning!</h1>";
+            }
+        }
+    </script>
+</body>
+</html>
